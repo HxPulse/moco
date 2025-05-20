@@ -7,5 +7,8 @@ def makeAPIcall(url):
     request.text
     return request.json()
 
+def retrieveWeapons()
+    with open("countries.txt", "r") as f:
+    countries = [line.strip() for line in f]
 
 makeAPIcall("")

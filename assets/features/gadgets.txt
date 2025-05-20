@@ -1,0 +1,16 @@
+Splash Heal, 16
+Smart Fireworks, 20
+Boombox, 12
+Vitamin Shot, 10
+Monster Taser, 5
+Pepper Spray, 14
+Snow Globe, 30
+Life Jacket, 15
+Multi Zapper, 18
+Spicy Daggers, 10
+Explosive 6-Pack, 10
+Super Loud Whistle, 12
+Revitalizing Mist, 8
+Really Cool Sticker, 20
+Shelldon, 30
+
