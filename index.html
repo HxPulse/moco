@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>My Page</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<h1>Does it work ?</h1>
-</body>
+    <head>
+        <title>My Page</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Does it work ?</h1>
+
+
+        <select id="weaponSelect"></select>
+
+        <script>
+            // Fetch the weapons.txt file
+            fetch('assets/features/weapons.txt')
+                .then(response => response.text())
+                .then(data => {
+                    const select = document.getElementById('weaponSelect');
+                    const lines = data.split('\n').filter(line => line.trim() !== '');
+                    lines.forEach(line => {
+                        const option = document.createElement('option');
+                        option.textContent = line;
+                        option.value = line;
+                        select.appendChild(option);
+                    });
+                });
+        </script>
+    </body>
 </html>
