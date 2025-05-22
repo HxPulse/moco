@@ -1,12 +1,12 @@
-Monster Slugger,
-Techno Fists,
-Wolf Stick,
-Staff of Good Vibes,
-Toothpick & Shield,
-Portable Portal,
-CPU Bomb,
-Speedshot,
-Medicine Ball,
-Jaded Blades,
-Spinsickle,
+Monster Slugger
+Techno Fists
+Wolf Stick
+Staff of Good Vibes
+Toothpick & Shield
+Portable Portal
+CPU Bomb
+Speedshot
+Medicine Ball
+Jaded Blades
+Spinsickle
 Buzz-Kill

@@ -1,11 +1,11 @@
-Auto Zapper,
-Vampire Teeth,
-Smelly Socks,
-Unstable Lazer,
-Explode-o-Matic Trigger,
-R&B Mixtape,
-Unstable Beam,
-Unstable Lightning,
-Healthy Snacks,
-Healing Charm,
+Auto Zapper
+Vampire Teeth
+Smelly Socks
+Unstable Lazer
+Explode-o-Matic Trigger
+R&B Mixtape
+Unstable Beam
+Unstable Lightning
+Healthy Snacks
+Healing Charm
 Chicken-o-Matic

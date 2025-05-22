@@ -9,21 +9,9 @@
 
 
         <select id="weaponSelect"></select>
+        <select id="gadgetsSelect"></select>
+        <select id="passivesSelect"></select>
 
-        <script>
-            // Fetch the weapons.txt file
-            fetch('assets/features/weapons.txt')
-                .then(response => response.text())
-                .then(data => {
-                    const select = document.getElementById('weaponSelect');
-                    const lines = data.split('\n').filter(line => line.trim() !== '');
-                    lines.forEach(line => {
-                        const option = document.createElement('option');
-                        option.textContent = line;
-                        option.value = line;
-                        select.appendChild(option);
-                    });
-                });
-        </script>
+        <script src="js/main.js"></script>
     </body>
 </html>
