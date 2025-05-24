@@ -100,7 +100,7 @@ body::before {
   color: #444;
   font-family: 'Inter', sans-serif;
   font-weight: 700; /* matches typical h1 boldness */
-  font-size: 1.2rem; /* similar to your h1 */
+  font-size: 1rem; /* similar to your h1 */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
