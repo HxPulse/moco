@@ -97,7 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'assets/images/backgrounds/bg1.png',
     'assets/images/backgrounds/bg2.png',
     'assets/images/backgrounds/bg3.png',
-    'assets/images/backgrounds/bg4.png'
+    'assets/images/backgrounds/bg4.png',
+    'assets/images/backgrounds/bg5.png',
+    'assets/images/backgrounds/bg6.png'
   ];
   let currentIndex = 0;
 
