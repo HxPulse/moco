@@ -92,6 +92,32 @@ document.querySelectorAll('.build').forEach(buildDiv => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const backgrounds = [
+    'assets/images/backgrounds/bg1.png',
+    'assets/images/backgrounds/bg2.png',
+    'assets/images/backgrounds/bg3.png',
+    'assets/images/backgrounds/bg4.png'
+  ];
+  let currentIndex = 0;
+
+  const btn = document.getElementById('bgCycleBtn');
+
+  btn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+    document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundPosition = 'center center';
+  });
+
+  // Optional: Set initial background on load
+  document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundRepeat = 'no-repeat';
+  document.body.style.backgroundPosition = 'center center';
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     populateSelectsByClass('weaponSelect', weapons);
