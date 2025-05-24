@@ -80,6 +80,20 @@ function updateGrandTotal() {
   document.getElementById('grandTotalValue').textContent = grandSum;
 }
 
+document.querySelectorAll('.build').forEach(buildDiv => {
+  buildDiv.querySelectorAll('select').forEach(sel => {
+    sel.addEventListener('change', () => {
+      updateTotal(buildDiv);
+
+      // Update value display
+      const valueDisplay = sel.nextElementSibling;
+      if (valueDisplay && valueDisplay.classList.contains('value-display')) {
+        valueDisplay.textContent = getValue(sel.value);
+      }
+    });
+  });
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     populateSelectsByClass('weaponSelect', weapons);

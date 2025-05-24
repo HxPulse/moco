@@ -11,6 +11,7 @@ body {
 }
 
 .build {
+  width: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,5 +38,24 @@ body {
 .images-container img {
   max-height: 300px; /* Adjust size as needed */
   object-fit: contain;
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px; /* space between selects */
+}
+
+.select-wrapper select {
+  width: 95%;  /* smaller width */
+  padding: 4px;
+}
+
+.value-display {
+  width: 5%;          /* takes remaining space */
+  text-align: left;
+  font-weight: 600;
+  color: #333;
 }
 
