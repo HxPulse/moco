@@ -3,14 +3,129 @@
     <head>
         <title>My Page</title>
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Does it work ?</h1>
+        <h1>MCR Tournament Build Maker</h1>
 
 
-        <select id="weaponSelect"></select>
-        <select id="gadgetsSelect"></select>
-        <select id="passivesSelect"></select>
+        <div class="build-container">
+
+            <div class="build">
+                <div>Player 1</div><br/>
+
+                <div>Weapon</div>
+                <select class="weaponSelect"></select>
+                <hr class="separator"/>
+
+                <div>Gadget 1</div>
+                <select class="gadgetSelect1"></select><br/>
+                <div>Gadget 2</div>
+                <select class="gadgetSelect2"></select><br/>
+                <div>Gadget 3</div>
+                <select class="gadgetSelect3"></select><br/>
+                <hr class="separator"/>
+
+                <div>Passive 1</div>
+                <select class="passiveSelect1"></select><br/>
+                <div>Passive 2</div>
+                <select class="passiveSelect2"></select><br/>
+                <div>Passive 3</div>
+                <select class="passiveSelect3"></select><br/>
+                <hr class="separator"/>
+
+                <div class="total">Total: <span class="totalValue">0</span></div>
+            </div>
+
+            <div class="build">
+                <div>Player 2</div><br/>
+
+                <div>Weapon</div>
+                <select class="weaponSelect"></select>
+                <hr class="separator"/>
+
+                <div>Gadget 1</div>
+                <select class="gadgetSelect1"></select><br/>
+                <div>Gadget 2</div>
+                <select class="gadgetSelect2"></select><br/>
+                <div>Gadget 3</div>
+                <select class="gadgetSelect3"></select><br/>
+                <hr class="separator"/>
+
+                <div>Passive 1</div>
+                <select class="passiveSelect1"></select><br/>
+                <div>Passive 2</div>
+                <select class="passiveSelect2"></select><br/>
+                <div>Passive 3</div>
+                <select class="passiveSelect3"></select><br/>
+                <hr class="separator"/>
+
+                <div class="total">Total: <span class="totalValue">0</span></div>
+            </div>
+
+            <div class="build">
+                <div>Player 3</div><br/>
+
+                <div>Weapon</div>
+                <select class="weaponSelect"></select>
+                <hr class="separator"/>
+
+                <div>Gadget 1</div>
+                <select class="gadgetSelect1"></select><br/>
+                <div>Gadget 2</div>
+                <select class="gadgetSelect2"></select><br/>
+                <div>Gadget 3</div>
+                <select class="gadgetSelect3"></select><br/>
+                <hr class="separator"/>
+
+                <div>Passive 1</div>
+                <select class="passiveSelect1"></select><br/>
+                <div>Passive 2</div>
+                <select class="passiveSelect2"></select><br/>
+                <div>Passive 3</div>
+                <select class="passiveSelect3"></select><br/>
+                <hr class="separator"/>
+
+                <div class="total">Total: <span class="totalValue">0</span></div>
+            </div>
+
+            <div class="build">
+                <div>Player 4</div><br/>
+
+                <div>Weapon</div>
+                <select class="weaponSelect"></select>
+                <hr class="separator"/>
+
+                <div>Gadget 1</div>
+                <select class="gadgetSelect1"></select><br/>
+                <div>Gadget 2</div>
+                <select class="gadgetSelect2"></select><br/>
+                <div>Gadget 3</div>
+                <select class="gadgetSelect3"></select><br/>
+                <hr class="separator"/>
+
+                <div>Passive 1</div>
+                <select class="passiveSelect1"></select><br/>
+                <div>Passive 2</div>
+                <select class="passiveSelect2"></select><br/>
+                <div>Passive 3</div>
+                <select class="passiveSelect3"></select><br/>
+                <hr class="separator"/>
+
+                <div class="total">Total: <span class="totalValue">0</span></div>
+            </div>
+        </div><br/>
+
+        <div class="grand-total">
+            Team Total: <span id="grandTotalValue">0</span>
+        </div>
+
+        <div class="images-container">
+            <img src="assets/images/WeaponsMCR.png" alt="Weapons" />
+            <img src="assets/images/GadgetsMCR.png" alt="Gadgets" />
+            <img src="assets/images/PassivesMCR.png" alt="Passives" />
+        </div>
+
 
         <script src="js/main.js"></script>
     </body>
