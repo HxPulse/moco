@@ -19,7 +19,6 @@ const gadgets = {
     "Life Jacket": 10,
     "Super Loud Whistle": 30,
     "Splash Heal": 10,
-    "Revitalizing Mist": 10
 };
 
 const passives = {
@@ -30,7 +29,6 @@ const passives = {
     "Auto Zapper": 30,
     "Vampire Teeth": 10,
     "R&B Mixtape": 10,
-    "Healing Charm": 10,
     "Explode-O-Matic": 20
 };
 
