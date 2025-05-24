@@ -32,11 +32,11 @@ const passives = {
     "Explode-O-Matic": 20
 };
 
-function getValue(name) {
+function getValue(name) {       // retrieves selected item value
   return weapons[name] || gadgets[name] || passives[name] || 0;
 }
 
-function updateTotal(buildDiv) {
+function updateTotal(buildDiv) {      // updates value regarding the selected items
   const selects = buildDiv.querySelectorAll('select');
   let sum = 0;
   selects.forEach(sel => {
@@ -44,19 +44,17 @@ function updateTotal(buildDiv) {
     sum += getValue(val);
   });
   buildDiv.querySelector('.totalValue').textContent = sum;
-  updateGrandTotal();  // update grand total each time a build total changes
+  updateGrandTotal();
 }
 
-
-function populateSelectsByClass(className, data) {
+function populateSelectsByClass(className, data) {      // filling the selectors
     const selects = document.querySelectorAll(`.${className}`);
     selects.forEach(select => {
-        // Add an empty option as the first option
         const emptyOption = document.createElement('option');
         emptyOption.textContent = '';
         emptyOption.value = '';
         emptyOption.selected = true;
-        emptyOption.disabled = true;  // optional: to prevent selecting empty again after choosing something else
+        emptyOption.disabled = true;
         select.appendChild(emptyOption);
 
         for (const key in data) {
@@ -69,7 +67,7 @@ function populateSelectsByClass(className, data) {
 }
 
 
-function updateGrandTotal() {
+function updateGrandTotal() {       // Team total
   const allTotals = document.querySelectorAll('.totalValue');
   let grandSum = 0;
   allTotals.forEach(span => {
@@ -83,7 +81,6 @@ document.querySelectorAll('.build').forEach(buildDiv => {
     sel.addEventListener('change', () => {
       updateTotal(buildDiv);
 
-      // Update value display
       const valueDisplay = sel.nextElementSibling;
       if (valueDisplay && valueDisplay.classList.contains('value-display')) {
         valueDisplay.textContent = getValue(sel.value);
@@ -92,7 +89,7 @@ document.querySelectorAll('.build').forEach(buildDiv => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {   // changing image background
   const backgrounds = [
     'assets/images/backgrounds/bg1.png',
     'assets/images/backgrounds/bg2.png',
@@ -113,15 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.backgroundPosition = 'center center';
   });
 
-  // Optional: Set initial background on load
-  document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+  document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;      // initial background load
   document.body.style.backgroundSize = 'cover';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundPosition = 'center center';
 });
 
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {    // selectors
     populateSelectsByClass('weaponSelect', weapons);
     populateSelectsByClass('gadgetSelect1', gadgets);
     populateSelectsByClass('gadgetSelect2', gadgets);

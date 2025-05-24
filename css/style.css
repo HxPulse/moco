@@ -1,31 +1,31 @@
 body {
   position: relative;
   background-image: url('assets/images/backgrounds/bg1.png');
-  background-size: cover;         /* cover the entire page */
-  background-position: center;    /* center the image */
-  background-repeat: no-repeat;   /* don't repeat the image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Inter', sans-serif;
   text-align: center;
 }
 
-body::before {
+body::before { /* adding a slightly background dark overlay */
   content: "";
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4); /* just 10% opacity black */
+  background-color: rgba(0, 0, 0, 0.4);
   pointer-events: none;
   z-index: -1;
 }
 
-.build-container {
+.build-container {      /* contains everything */
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
 }
 
-.build {
+.build {        /* rectangles for each triangle */
   width: 15%;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,8 @@ body::before {
   background-color: #f9f9f9;     /* optional: subtle background */
   box-shadow: 0 0 10px rgba(0,0,0,0.1); /* optional: light shadow */
 }
-.separator {
+
+.separator {       /* lines in between sections */
   width: 80%;
   margin: 10px auto;
   border: none;
@@ -50,6 +51,17 @@ body::before {
   margin-top: 12px;
 }
 
+.images-container img {
+  max-height: 500px;
+  object-fit: contain;
+  border: 4px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .boxed {
   display: inline-block;
   padding: 8px;
@@ -60,42 +72,27 @@ body::before {
   margin: 0px auto;
 }
 
-.images-container img {
-  max-height: 500px; /* Adjust size as needed */
-  object-fit: contain;
-  border: 4px solid white;          /* contour color and thickness */
-  border-radius: 10px;             /* optional: rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* optional: shadow effect */
-  display: block;      /* removes inline spacing */
-  max-width: 100%;     /* responsive */
-  height: auto;
-}
-
-body, html {
-  overflow-x: hidden;  /* avoid horizontal scroll */
-}
-
 .select-wrapper {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 10px; /* space between selects */
+  margin-bottom: 10px;
 }
 
 .select-wrapper select {
  font-family: 'Inter', sans-serif;
-  width: 95%;  /* smaller width */
+  width: 95%;  /* to let space to the small value next to it */
   padding: 4px;
 }
 
-.value-display {
-  width: 5%;          /* takes remaining space */
+.value-display {    /* value displayed next to the selectors */
+  width: 5%;
   text-align: left;
   font-weight: 600;
   color: #333;
 }
 
-#bgCycleBtn {
+#bgCycleBtn {   /* button to change background image */
   position: fixed;
   bottom: 10px;
   left: 10px;
