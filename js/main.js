@@ -85,6 +85,13 @@ document.querySelectorAll('.build').forEach(buildDiv => {
       if (valueDisplay && valueDisplay.classList.contains('value-display')) {
         valueDisplay.textContent = getValue(sel.value);
       }
+
+      const iconImg = sel.previousElementSibling;
+      if (iconImg && iconImg.tagName === 'IMG') {
+        const safeName = sel.value.replace(/[^a-z0-9]/gi, '_');
+        iconImg.src = `assets/images/items/${safeName}.png`;
+        iconImg.alt = sel.value;
+      }
     });
   });
 });

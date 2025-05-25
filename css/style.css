@@ -85,6 +85,22 @@ body::before { /* adding a slightly background dark overlay */
   padding: 4px;
 }
 
+.player-name-input {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 100%;
+}
+
+.item-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
 .value-display {    /* value displayed next to the selectors */
   width: 5%;
   text-align: left;
