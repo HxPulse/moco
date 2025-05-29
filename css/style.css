@@ -41,7 +41,7 @@ body::before { /* adding a slightly background dark overlay */
   padding: 15px;                 /* space inside the box */
   border: 2px solid #444;        /* visible border */
   border-radius: 10px;           /* rounded corners */
-  background-color: rgba(0, 0, 0, 0.7);     /* optional: subtle background */
+  background-color: rgba(0, 0, 0, 0.75);     /* optional: subtle background */
   box-shadow: 0 0 10px rgba(0,0,0,0.1); /* optional: light shadow */
 }
 
