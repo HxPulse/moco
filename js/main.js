@@ -1,3 +1,5 @@
+/*** ITEMS ***/
+
 const weapons = {
     "Speedshot": 70,
     "Jaded Blades": 100,
@@ -32,6 +34,8 @@ const passives = {
     "Explode-O-Matic": 20
 };
 
+/*** FUNCTIONS ***/
+
 function getValue(name) {       // retrieves selected item value
   return weapons[name] || gadgets[name] || passives[name] || 0;
 }
@@ -39,33 +43,13 @@ function getValue(name) {       // retrieves selected item value
 function updateTotal(buildDiv) {      // updates value regarding the selected items
   const selects = buildDiv.querySelectorAll('select');
   let sum = 0;
-  selects.forEach(sel => {
-    const val = sel.value;
-    sum += getValue(val);
+  const previews = buildDiv.querySelectorAll('img[data-item-name]');
+    previews.forEach(img => {
+      sum += getValue(img.dataset.itemName);
   });
   buildDiv.querySelector('.totalValue').textContent = sum;
   updateGrandTotal();
 }
-
-function populateSelectsByClass(className, data) {      // filling the selectors
-    const selects = document.querySelectorAll(`.${className}`);
-    selects.forEach(select => {
-        const emptyOption = document.createElement('option');
-        emptyOption.textContent = '';
-        emptyOption.value = '';
-        emptyOption.selected = true;
-        emptyOption.disabled = true;
-        select.appendChild(emptyOption);
-
-        for (const key in data) {
-            const option = document.createElement('option');
-            option.textContent = key;
-            option.value = key;
-            select.appendChild(option);
-        }
-    });
-}
-
 
 function updateGrandTotal() {       // Team total
   const allTotals = document.querySelectorAll('.totalValue');
@@ -76,23 +60,70 @@ function updateGrandTotal() {       // Team total
   document.getElementById('grandTotalValue').textContent = grandSum;
 }
 
-document.querySelectorAll('.build').forEach(buildDiv => {
-  buildDiv.querySelectorAll('select').forEach(sel => {
-    sel.addEventListener('change', () => {
+function getItemImage(name) {
+  const filename = name.replace(/[^a-z0-9]/gi, '_') + ".png";
+  return `assets/images/items/${filename}`;
+}
+
+function openItemPopup(type, clickedBtn) {
+  const data = type === 'weapon' ? weapons : type === 'gadget' ? gadgets : passives;
+  const popup = document.getElementById(`${type}Popup`);
+  const optionsContainer = popup.querySelector(`.${type}-options`);
+  optionsContainer.innerHTML = '';
+
+  Object.keys(data).forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('itemPopup', `${type}-item`);
+
+    const img = document.createElement('img');
+    img.src = getItemImage(item);
+    img.alt = item;
+    img.title = item;
+
+    const label = document.createElement('span');
+    label.textContent = data[item];
+
+    itemDiv.appendChild(img);
+    itemDiv.appendChild(label);
+
+    itemDiv.addEventListener('click', () => {
+      // Instead of buildDiv, we look relative to clickedBtn:
+      const itemRow = clickedBtn.parentElement;
+      const imgPreview = itemRow.querySelector('.itemImgPreview');
+      const valueDisplay = itemRow.querySelector('.value-display');
+
+
+      imgPreview.src = getItemImage(item);
+      imgPreview.style.display = 'inline';
+      imgPreview.alt = item;
+      valueDisplay.textContent = data[item];
+
+      imgPreview.dataset.itemName = item;
+
+      const buildDiv = clickedBtn.closest('.build');
       updateTotal(buildDiv);
-
-      const valueDisplay = sel.nextElementSibling;
-      if (valueDisplay && valueDisplay.classList.contains('value-display')) {
-        valueDisplay.textContent = getValue(sel.value);
-      }
-
-      const iconImg = sel.previousElementSibling;
-      if (iconImg && iconImg.tagName === 'IMG') {
-        const safeName = sel.value.replace(/[^a-z0-9]/gi, '_');
-        iconImg.src = `assets/images/items/${safeName}.png`;
-        iconImg.alt = sel.value;
-      }
+      popup.style.display = 'none';
     });
+
+    optionsContainer.appendChild(itemDiv);
+  });
+
+  popup.style.display = 'flex';
+}
+
+/*** DOC LISTENERS ***/
+
+['weapon', 'gadget', 'passive'].forEach(type => {
+  document.querySelectorAll(`.${type}Btn`).forEach(btn => {
+    btn.addEventListener('click', () => openItemPopup(type, btn));
+  });
+});
+
+document.querySelectorAll('.popup').forEach(popup => {
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
   });
 });
 
@@ -121,20 +152,4 @@ document.addEventListener('DOMContentLoaded', () => {   // changing image backgr
   document.body.style.backgroundSize = 'cover';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundPosition = 'center center';
-});
-
-document.addEventListener('DOMContentLoaded', () => {    // selectors
-    populateSelectsByClass('weaponSelect', weapons);
-    populateSelectsByClass('gadgetSelect1', gadgets);
-    populateSelectsByClass('gadgetSelect2', gadgets);
-    populateSelectsByClass('gadgetSelect3', gadgets);
-    populateSelectsByClass('passiveSelect1', passives);
-    populateSelectsByClass('passiveSelect2', passives);
-    populateSelectsByClass('passiveSelect3', passives);
-
-    document.querySelectorAll('.build').forEach(buildDiv => {
-      buildDiv.querySelectorAll('select').forEach(sel => {
-        sel.addEventListener('change', () => updateTotal(buildDiv));
-      });
-    });
 });

@@ -1,6 +1,10 @@
+/************/
+/*** BODY ***/
+/************/
+
 body {
   position: relative;
-  background-image: url('assets/images/backgrounds/bg1.png');
+  background-image: url('../assets/images/backgrounds/bg1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,6 +22,10 @@ body::before { /* adding a slightly background dark overlay */
   z-index: -1;
 }
 
+/**************************************/
+/*** BUILD - Player Build Container ***/
+/**************************************/
+
 .build-container {      /* contains everything */
   display: flex;
   justify-content: center;
@@ -26,16 +34,74 @@ body::before { /* adding a slightly background dark overlay */
 }
 
 .build {        /* rectangles for each triangle */
-  width: 15%;
+  width: 13%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;                 /* space inside the box */
   border: 2px solid #444;        /* visible border */
   border-radius: 10px;           /* rounded corners */
-  background-color: #f9f9f9;     /* optional: subtle background */
+  background-color: rgba(0, 0, 0, 0.7);     /* optional: subtle background */
   box-shadow: 0 0 10px rgba(0,0,0,0.1); /* optional: light shadow */
 }
+
+.player-name-input {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  cursor: text;
+  background-color: rgba(255, 255, 255, 0.1); /* optional: helps spot image bounds */
+  border-radius: 8px;
+}
+
+/*** Item line container ***/
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.picker {
+  display: flex;
+  align-items: center; /* vertically centers items */
+  gap: 8px; /* optional spacing between image and text */
+}
+
+.value-display {    /* value displayed next to the selectors */
+  width: 5%;
+  text-align: left;
+  color: #fff;
+}
+
+/*** Clickable item selector ***/
+
+.clickable-label {
+   display: inline-block;
+   padding: 6px 14px;
+   background-color: #f0f0f0;
+   color: #333;
+   border: 2px solid #444;
+   border-radius: 10px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+   text-align: center;
+   margin-bottom: 5px;
+ }
+
+.clickable-label:hover {
+    animation: bgBW 4s infinite;
+ }
+
+/*** Line separating Weapon/Gadgets/Passives ***/
 
 .separator {       /* lines in between sections */
   width: 80%;
@@ -44,11 +110,21 @@ body::before { /* adding a slightly background dark overlay */
   border-top: 1px solid #ccc;
 }
 
+/*** Images ***/
+
 .images-container {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 12px;
+}
+
+.itemImgPreview {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;       /* ensures the image scales to fit inside */
+  background-color: rgba(255, 255, 255, 0.1); /* optional: helps spot image bounds */
+  border-radius: 8px;        /* optional: rounded corners */
 }
 
 .images-container img {
@@ -62,51 +138,109 @@ body::before { /* adding a slightly background dark overlay */
   height: auto;
 }
 
+/*** Total of the player ***/
+.total {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+/************************************/
+/*** BOXED - Title and Team Total ***/
+/************************************/
+
 .boxed {
   display: inline-block;
-  padding: 8px;
+  padding: 12px;
   border: 2px solid #444;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0px auto;
+  color: white;
 }
 
-.select-wrapper {
+/**********************/
+/*** POPUP - Pop up ***/
+/**********************/
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
+  justify-content: center;
+  z-index: 999;
 }
 
-.select-wrapper select {
- font-family: 'Inter', sans-serif;
-  width: 95%;  /* to let space to the small value next to it */
-  padding: 4px;
-}
-
-.player-name-input {
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: transparent;
-  border: none;
-  outline: none;
+.popup-content {
+  background: rgba(0, 0, 0, 0.8); /* lighter, more transparent blue */
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
   text-align: center;
-  width: 100%;
+  position: relative;
+  color: white;
+  border: 3px solid white; /* white border around popup */
 }
 
-.item-icon {
-  width: 25px;
-  height: 25px;
+/*** Item images ***/
+
+.itemPopup {
+  width: 80px;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.itemPopup img {
+  width: 60px;
+  height: 60px;
   object-fit: contain;
+  display: block;
+  margin: 0 auto 4px;
+  border: 2px solid transparent;
+  transition: border 0.2s;
 }
 
-.value-display {    /* value displayed next to the selectors */
-  width: 5%;
-  text-align: left;
-  font-weight: 600;
-  color: #333;
+.itemPopup {
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 6px;
+  transition: border-color 0.2s;
 }
+
+.itemPopup:hover {
+  animation: borderBW 1.5s infinite;
+}
+
+.itemPopup span {
+  display: block;
+  font-size: 18px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.weapon-options, .gadget-options, .passive-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-items: center;
+  border-color: rgba(255, 255, 255, 0.3); /
+}
+
+/**********************************************************/
+/*** BG BUTTON - Bottom left button changing background ***/
+/**********************************************************/
 
 #bgCycleBtn {   /* button to change background image */
   position: fixed;
@@ -130,4 +264,25 @@ body::before { /* adding a slightly background dark overlay */
   color: #f9f9f9;
 }
 
+@keyframes borderBW {
+  0%   { border-color: white;}
+  50%  { border-color: gray;}
+  100% { border-color: white;}
+}
+
+
+@keyframes bgBW {
+  0% {
+    background-color: black;
+    color: white;
+  }
+  50% {
+    background-color: #8B0000;
+    color: #FFC0CB;
+  }
+  100% {
+    background-color: black;
+    color: white;
+  }
+}
 
