@@ -128,20 +128,15 @@ document.querySelectorAll('.popup').forEach(popup => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {   // changing image background
-  const backgrounds = [
-    'assets/images/backgrounds/bg1.png',
-    'assets/images/backgrounds/bg2.png',
-    'assets/images/backgrounds/bg3.png',
-    'assets/images/backgrounds/bg4.png',
-    'assets/images/backgrounds/bg5.png',
-    'assets/images/backgrounds/bg6.png'
-  ];
+  const backgrounds = Array.from({ length: 9 }, (_, i) => `assets/images/backgrounds/bg${i}.png`);
+  console.log(backgrounds);
   let currentIndex = 0;
 
   const btn = document.getElementById('bgCycleBtn');
 
   btn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % backgrounds.length;
+    console.log(currentIndex);
     document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundRepeat = 'no-repeat';
@@ -152,4 +147,37 @@ document.addEventListener('DOMContentLoaded', () => {   // changing image backgr
   document.body.style.backgroundSize = 'cover';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundPosition = 'center center';
+});
+
+document.getElementById('clipboardBtn').addEventListener('click', () => {
+  const builds = document.querySelectorAll('.build');
+  let output = '```\n';
+  let grandTotal = 0;
+
+  builds.forEach((build, index) => {
+    output += `Player ${index + 1}:\n`;
+
+    const rows = build.querySelectorAll('.item-row');
+    rows.forEach(row => {
+      const img = row.querySelector('.itemImgPreview');
+      const value = row.querySelector('.value-display')?.textContent.trim();
+
+      if (img && value) {
+        const itemName = img.dataset.itemName || img.alt || 'Unknown';
+        output += `  ${itemName}: ${value}\n`;
+      }
+    });
+
+    const totalText = build.querySelector('.totalValue')?.textContent.trim();
+    const total = parseInt(totalText) || 0;
+    grandTotal += total;
+    output += `  Total: ${total}\n\n`;
+  });
+
+  output += `Team Total: ${grandTotal}`;
+  output += '```';
+
+  navigator.clipboard.writeText(output)
+    .then(() => alert('Builds copied to clipboard!'))
+    .catch(err => alert('Failed to copy: ' + err));
 });

@@ -4,7 +4,6 @@
 
 body {
   position: relative;
-  background-image: url('../assets/images/backgrounds/bg1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -242,7 +241,11 @@ body::before { /* adding a slightly background dark overlay */
 /*** BG BUTTON - Bottom left button changing background ***/
 /**********************************************************/
 
-#bgCycleBtn {   /* button to change background image */
+#clipboardBtn {
+  bottom: 60px; /* so clipboard btn is 10px above bgCycleBtn */
+}
+
+.blButtons {   /* BL buttons */
   position: fixed;
   bottom: 10px;
   left: 10px;
@@ -253,13 +256,13 @@ body::before { /* adding a slightly background dark overlay */
   background-color: #f9f9f9;
   color: #444;
   font-family: 'Inter', sans-serif;
-  font-weight: 700; /* matches typical h1 boldness */
-  font-size: 1rem; /* similar to your h1 */
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#bgCycleBtn:hover {
+.blButtons:hover {
   background-color: #444;
   color: #f9f9f9;
 }
