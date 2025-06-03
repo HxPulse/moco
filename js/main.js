@@ -157,22 +157,39 @@ document.getElementById('clipboardBtn').addEventListener('click', () => {
   builds.forEach((build, index) => {
     output += `Player ${index + 1}:\n`;
 
+    let weapon = '';
+    const gadgets = [];
+    const passives = [];
+
     const rows = build.querySelectorAll('.item-row');
     rows.forEach(row => {
+      const label = row.querySelector('.clickable-label');
       const img = row.querySelector('.itemImgPreview');
       const value = row.querySelector('.value-display')?.textContent.trim();
 
-      if (img && value) {
-        const itemName = img.dataset.itemName || img.alt || 'Unknown';
-        output += `  ${itemName}: ${value}\n`;
+      if (!label || !img || !value) return;
+
+      const itemName = img.dataset.itemName || img.alt || 'Unknown';
+      const formatted = `${itemName}: ${value}`;
+
+      if (label.classList.contains('weaponBtn')) {
+        weapon = formatted;
+      } else if (label.classList.contains('gadgetBtn')) {
+        gadgets.push(formatted);
+      } else if (label.classList.contains('passiveBtn')) {
+        passives.push(formatted);
       }
     });
 
+    output += `  ${weapon}\n`;
+    output += `  ${gadgets.join(' | ')}\n`;
+    output += `  ${passives.join(' | ')}\n`;
     const totalText = build.querySelector('.totalValue')?.textContent.trim();
     const total = parseInt(totalText) || 0;
     grandTotal += total;
     output += `  Total: ${total}\n\n`;
   });
+
 
   output += `Team Total: ${grandTotal}`;
   output += '```';
