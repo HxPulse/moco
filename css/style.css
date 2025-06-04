@@ -1,9 +1,13 @@
 /************/
 /*** BODY ***/
 /************/
+html, body {
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
 
 body {
-  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -234,7 +238,7 @@ body::before { /* adding a slightly background dark overlay */
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   justify-items: center;
-  border-color: rgba(255, 255, 255, 0.3); /
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /**********************************************************/
@@ -242,14 +246,21 @@ body::before { /* adding a slightly background dark overlay */
 /**********************************************************/
 
 #clipboardBtn {
-  bottom: 60px; /* so clipboard btn is 10px above bgCycleBtn */
+  bottom: 4.5%; /* so clipboard btn is 10px above bgCycleBtn */
 }
 
-.blButtons {   /* BL buttons */
+.blButtonsContainer {
   position: fixed;
   bottom: 10px;
   left: 10px;
+  display: flex;
+  gap: 10px;          /* space between buttons */
   z-index: 1000;
+}
+
+/* Remove individual fixed positioning from buttons */
+.blButtons {
+  position: static;   /* reset from fixed */
   padding: 8px 16px;
   border-radius: 10px;
   border: 2px solid #444;
@@ -286,6 +297,55 @@ body::before { /* adding a slightly background dark overlay */
   100% {
     background-color: black;
     color: white;
+  }
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Mobile First: Adjust layout for narrow screens */
+@media (max-width: 768px) {
+  .build-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .build {
+    width: 100%; /* Or adjust to fit well in two columns */
+    padding: 1px;
+  }
+
+  .images-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value-display {
+    width: auto;
+  }
+
+  .weapon-options,
+  .gadget-options,
+  .passive-options {
+    grid-template-columns: repeat(2, 1fr); /* fewer columns on small screens */
+  }
+  .blButtons{
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+/* Tablets & small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .build {
+    width: 25%;
+  }
+
+  .weapon-options,
+  .gadget-options,
+  .passive-options {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
