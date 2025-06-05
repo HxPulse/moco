@@ -129,14 +129,12 @@ document.querySelectorAll('.popup').forEach(popup => {
 
 document.addEventListener('DOMContentLoaded', () => {   // changing image background
   const backgrounds = Array.from({ length: 9 }, (_, i) => `assets/images/backgrounds/bg${i}.png`);
-  console.log(backgrounds);
   let currentIndex = 0;
 
   const btn = document.getElementById('bgCycleBtn');
 
   btn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % backgrounds.length;
-    console.log(currentIndex);
     document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundRepeat = 'no-repeat';
@@ -150,51 +148,18 @@ document.addEventListener('DOMContentLoaded', () => {   // changing image backgr
 });
 
 document.getElementById('clipboardBtn').addEventListener('click', () => {
-  const builds = document.querySelectorAll('.build');
-  let output = '```\n';
-  let grandTotal = 0;
+  const target = document.querySelector('.build-container');
 
-  builds.forEach((build, index) => {
-    output += `Player ${index + 1}:\n`;
-
-    let weapon = '';
-    const gadgets = [];
-    const passives = [];
-
-    const rows = build.querySelectorAll('.item-row');
-    rows.forEach(row => {
-      const label = row.querySelector('.clickable-label');
-      const img = row.querySelector('.itemImgPreview');
-      const value = row.querySelector('.value-display')?.textContent.trim();
-
-      if (!label || !img || !value) return;
-
-      const itemName = img.dataset.itemName || img.alt || 'Unknown';
-      const formatted = `${itemName}: ${value}`;
-
-      if (label.classList.contains('weaponBtn')) {
-        weapon = formatted;
-      } else if (label.classList.contains('gadgetBtn')) {
-        gadgets.push(formatted);
-      } else if (label.classList.contains('passiveBtn')) {
-        passives.push(formatted);
-      }
+  html2canvas(target, { backgroundColor: null }).then(canvas => {
+    canvas.toBlob(blob => {
+      if (!blob) return alert("Screenshot failed!");
+      const item = new ClipboardItem({ 'image/png': blob });
+      navigator.clipboard.write([item])
+        .then(() => alert('Screenshot copied to clipboard!'))
+        .catch(err => alert('Copy failed: ' + err));
     });
-
-    output += `  ${weapon}\n`;
-    output += `  ${gadgets.join(' | ')}\n`;
-    output += `  ${passives.join(' | ')}\n`;
-    const totalText = build.querySelector('.totalValue')?.textContent.trim();
-    const total = parseInt(totalText) || 0;
-    grandTotal += total;
-    output += `  Total: ${total}\n\n`;
   });
-
-
-  output += `Team Total: ${grandTotal}`;
-  output += '```';
-
-  navigator.clipboard.writeText(output)
-    .then(() => alert('Builds copied to clipboard!'))
-    .catch(err => alert('Failed to copy: ' + err));
 });
+
+
+
