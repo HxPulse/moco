@@ -34,6 +34,83 @@ const passives = {
     "Healing Charm": 20
 };
 
+/*** FINALISTS ***/
+
+const finalists = {
+  team1: {
+      name: "PSWZ", map1time: "1:03.95", map2time: "1:41.70", map3time: "",
+      player1: ["GRD • Poppin", "QYQ2GJU"], player2: ["IGRS • Zube", "Q0CCVUV"],
+      player3: ["Wassim", "G8P880G"], player4: ["Shqdowz", "LC8VQ0U"]
+  },
+
+  team2: {
+      name: "The Sleepers", map1time: "1:03.40", map2time: "1:42.20", map3time: "",
+      player1: ["TFE | Grim", "20YJ82YL"], player2: ["Adnan", "J8CQV2L"],
+      player3: ["hgt_1212", "2P82C8PR"], player4: ["TFE | otop", "VRP0RVL"]
+  },
+
+  team3: {
+      name: "I ate caramel last time", map1time: "1:03.40", map2time: "1:43.50", map3time: "",
+      player1: ["TSK • Shawn", "LUQRQVQ"], player2: ["Snipegirl137", "G9G2YL2"],
+      player3: ["Kaocto", "J82R0P0"], player4: ["Datiger", "LUCLCJG"]
+  },
+
+  team4: {
+      name: "OBLIVION", map1time: "1:03.95", map2time: "1:44.50", map3time: "",
+      player1: ["Nabi", "LCQPULU"], player2: ["Preda", "LCPUV0V"],
+      player3: ["Ciccio Rock", ""], player4: ["speedy", "8P8QLQ8G"]
+  },
+
+  team5: {
+      name: "TDN & Members", map1time: "1:06.75", map2time: "1:47.35", map3time: "",
+      player1: ["VIRGILINHO", "2VRL2PP0"], player2: ["MEPHISTO", "LUPYCVL"],
+      player3: ["SPARTA", "V02JC2L"], player4: ["Hazel", "QUY89UU"]
+  },
+
+  team6: {
+      name: "work in mo.gress", map1time: "1:07.30", map2time: "1:49.95", map3time: "",
+      player1: ["AFK | Xeve", ""], player2: ["nino", "2092VGLY"],
+      player3: ["Kaizer", "G20Q8JY"], player4: ["MCR | Wormo", "QU8VJCQ"]
+  },
+
+  team7: {
+      name: "BL1GHT", map1time: "1:08.20", map2time: "1:52.45", map3time: "",
+      player1: ["barin", ""], player2: ["LewisM", ""],
+      player3: ["于灰", "LU0GVYQ"], player4: ["1天", ""]
+  },
+
+  team8: {
+      name: "R.I.P. EGE", map1time: "1:03.90", map2time: "1:52.95", map3time: "",
+      player1: ["KOTS | Sunraku", "J2JQV0Y"], player2: ["KOTS | RedTroop", "Q0P08GR"],
+      player3: ["Falax", "RLL0YYQ"], player4: ["KOTS | Mello", "LCJQYQ9"]
+  },
+
+  team9: {
+      name: "KOTS", map1time: "1:03.40", map2time: "1:53.95", map3time: "",
+      player1: ["KOTS | Moros", "R0CLGCQ"], player2: ["KOTS | Hozen", "QU299PY"],
+      player3: ["KOTS | Zeth", "GJJVPP0"], player4: ["KOTS | Yass", ""]
+  },
+
+  team10: {
+      name: "KOTS3", map1time: "1:04.10", map2time: "1:56.30", map3time: "",
+      player1: ["KOTS | Kyros", ""], player2: ["KOTS | Crakiiz", "LCUU99J"],
+      player3: ["KOTS | WA_GA_KI", "Q9Y8QRL"], player4: ["KOTS | boubie", "LCR9RPV"]
+  },
+
+  team11: {
+      name: "Goblin Gang", map1time: "1:07.90", map2time: "1:57.90", map3time: "",
+      player1: ["Sly", "LV299C8"], player2: ["Hazard", "JP2QR0Y"],
+      player3: ["Xerosis", "RUQVRJG"], player4: ["TRIBEMARK", "QC8VLJP"]
+  },
+
+  team12: {
+      name: "SerNikolas", map1time: "1:08.40", map2time: "1:58.55", map3time: "",
+      player1: ["JKD", "JCG8Y80"], player2: ["King Dragon", "LVQQVUU"],
+      player3: ["nik", "GP8CQ80"], player4: ["Alby", ""]
+  }
+};
+
+
 /*** FUNCTIONS ***/
 
 function getValue(name) {       // retrieves selected item value
@@ -111,6 +188,33 @@ function openItemPopup(type, clickedBtn) {
   popup.style.display = 'flex';
 }
 
+function showTeamDetails(team) {
+  document.getElementById('teamName').textContent = team.name;
+
+  document.getElementById('map1time').textContent = team.map1time;
+  document.getElementById('map2time').textContent = team.map2time;
+  document.getElementById('map3time').textContent = team.map3time;
+
+  const playerButtons = document.getElementById('playerButtons').children;
+
+  const players = [team.player1, team.player2, team.player3, team.player4];
+
+  for (let i = 0; i < 4; i++) {
+    const btn = playerButtons[i];
+    const [name, tag] = players[i];
+    btn.textContent = name;
+    btn.dataset.tag = tag;
+
+    const newBtn = btn.cloneNode(true);
+    newBtn.addEventListener('click', () => {
+      const url = "https://mocolytics.com/stats?tag=%23" + tag;
+      window.open(url, "_blank");
+    });
+    btn.replaceWith(newBtn);
+  }
+  document.getElementById('teamDetailsPopup').style.display = 'flex';
+}
+
 /*** DOC LISTENERS ***/
 
 ['weapon', 'gadget', 'passive'].forEach(type => {
@@ -159,6 +263,25 @@ document.getElementById('clipboardBtn').addEventListener('click', () => {
         .catch(err => alert('Copy failed: ' + err));
     });
   });
+});
+
+document.getElementById('lbBtn').addEventListener('click', () => {
+  const container = document.getElementById('finalistsButtons');
+  container.innerHTML = ''; // clear old buttons
+
+  for (const key in finalists) {        // Create buttons for each team
+    const team = finalists[key];
+    const btn = document.createElement('button');
+    btn.textContent = team.name;
+    btn.dataset.teamKey = key; // store the key for later use
+    container.appendChild(btn);
+
+    btn.addEventListener('click', () => {
+      showTeamDetails(finalists[key]);
+      document.getElementById('finalistsPopup').style.display = 'none';
+    });
+  }
+  document.getElementById('finalistsPopup').style.display = 'block';
 });
 
 
