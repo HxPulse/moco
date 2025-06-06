@@ -8,18 +8,17 @@ const weapons = {
 };
 
 const gadgets = {
-    "Smart Fireworks": 50,
-    "Multi Zapper": 50,
     "Snow Globe": 50,
     "Super Loud Whistle": 50,
+    "Smart Fireworks": 40,
+    "Multi Zapper": 40,
     "Pepper Spray": 40,
     "Boombox": 40,
     "Really Cool Sticker": 30,
     "Vitamin Shot": 30,
     "Splash Heal": 30,
     "Monster Taser": 20,
-    "Spicy Dagger": 20,
-    "Revitalizing Mist": 20
+    "Spicy Dagger": 20
 };
 
 const passives = {
@@ -28,11 +27,11 @@ const passives = {
     "Unstable Lazer": 50,
     "Auto Zapper": 40,
     "Explode-O-Matic": 30,
+    "Healthy Snacks": 30,
+    "Healing Charm": 30,
     "Smelly Socks": 20,
     "Vampire Teeth": 20,
-    "R&B Mixtape": 20,
-    "Healthy Snacks": 20,
-    "Healing Charm": 20
+    "R&B Mixtape": 20
 };
 
 /*** FINALISTS ***/
