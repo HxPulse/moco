@@ -2,23 +2,24 @@
 
 const weapons = {
     "Speedshot": 70,
-    "Jaded Blades": 80,
+    "Jaded Blades": 60,
     "Spinsickle": 100,
-    "Toothpick & Shield": 30
+    "Toothpick & Shield": 50
 };
 
 const gadgets = {
     "Smart Fireworks": 50,
-    "Pepper Spray": 50,
+    "Pepper Spray": 40,
     "Multi Zapper": 50,
     "Boombox": 40,
     "Snow Globe": 50,
     "Monster Taser": 20,
-    "Spicy Dagger": 30,
+    "Spicy Dagger": 20,
     "Really Cool Sticker": 30,
     "Vitamin Shot": 30,
-    "Super Loud Whistle": 40,
-    "Splash Heal": 10
+    "Super Loud Whistle": 50,
+    "Splash Heal": 30,
+    "Revitalizing Mist": 20
 };
 
 const passives = {
@@ -26,11 +27,11 @@ const passives = {
     "Unstable Beam": 50,
     "Unstable Lazer": 50,
     "Smelly Socks": 20,
-    "Auto Zapper": 30,
-    "Vampire Teeth": 10,
-    "R&B Mixtape": 10,
-    "Explode-O-Matic": 40,
-    "Healthy Snacks": 10,
+    "Auto Zapper": 40,
+    "Vampire Teeth": 20,
+    "R&B Mixtape": 20,
+    "Explode-O-Matic": 30,
+    "Healthy Snacks": 20,
     "Healing Charm": 20
 };
 
@@ -93,7 +94,7 @@ const finalists = {
 
   team10: {
       name: "KOTS3", map1time: "1:04.10", map2time: "1:56.30", map3time: "",
-      player1: ["KOTS | Kyros", ""], player2: ["KOTS | Crakiiz", "LCUU99J"],
+      player1: ["KOTS | Kyros", "2YGR9ULY"], player2: ["KOTS | Crakiiz", "LCUU99J"],
       player3: ["KOTS | WA_GA_KI", "Q9Y8QRL"], player4: ["KOTS | boubie", "LCR9RPV"]
   },
 
@@ -206,10 +207,10 @@ function showTeamDetails(team) {
     btn.dataset.tag = tag;
 
     const newBtn = btn.cloneNode(true);
-    newBtn.addEventListener('click', () => {
-      const url = "https://mocolytics.com/stats?tag=%23" + tag;
+    /*newBtn.addEventListener('click', () => {
+      const url = "https://mocolytics.com/stats?tag=" + tag;
       window.open(url, "_blank");
-    });
+    });*/
     btn.replaceWith(newBtn);
   }
   document.getElementById('teamDetailsPopup').style.display = 'flex';
