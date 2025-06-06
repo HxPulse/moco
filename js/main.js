@@ -4,19 +4,19 @@ const weapons = {
     "Spinsickle": 100,
     "Speedshot": 70,
     "Jaded Blades": 60,
-    "Toothpick & Shield": 50
+    "Toothpick & Shield": 30
 };
 
 const gadgets = {
     "Snow Globe": 50,
     "Super Loud Whistle": 50,
+    "Multi Zapper": 50,
     "Smart Fireworks": 40,
-    "Multi Zapper": 40,
     "Pepper Spray": 40,
-    "Boombox": 40,
-    "Really Cool Sticker": 30,
+    "Boombox": 30,
     "Vitamin Shot": 30,
     "Splash Heal": 30,
+    "Really Cool Sticker": 20,
     "Monster Taser": 20,
     "Spicy Dagger": 20
 };
@@ -25,10 +25,10 @@ const passives = {
     "Unstable Lightning": 50,
     "Unstable Beam": 50,
     "Unstable Lazer": 50,
-    "Auto Zapper": 40,
-    "Explode-O-Matic": 30,
+    "Auto Zapper": 30,
     "Healthy Snacks": 30,
     "Healing Charm": 30,
+    "Explode-O-Matic": 20,
     "Smelly Socks": 20,
     "Vampire Teeth": 20,
     "R&B Mixtape": 20
