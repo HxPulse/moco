@@ -424,6 +424,7 @@ body::before { /* adding a slightly background dark overlay */
 
   .finalistsPopup-content {
     margin-left: 16.5%;         /* Shifts from the 38.5% under, again idk */
+    overflow-y: auto;
    }
 
   .weapon-options,
