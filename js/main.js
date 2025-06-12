@@ -38,73 +38,74 @@ const passives = {
 
 const finalists = {
   team1: {
-      name: "PSWZ", map1time: "1:03.95", map2time: "1:41.70", map3time: "",
+      name: "#1 - PSWZ", map1time: "1:03.95", map2time: "1:41.70", map3time: "3:26.95",
       player1: ["GRD • Poppin", "QYQ2GJU"], player2: ["IGRS • Zube", "Q0CCVUV"],
       player3: ["Wassim", "G8P880G"], player4: ["Shqdowz", "LC8VQ0U"]
   },
 
   team2: {
-      name: "The Sleepers", map1time: "1:03.40", map2time: "1:42.20", map3time: "",
+      name: "#2 - The Sleepers", map1time: "1:03.40", map2time: "1:42.20", map3time: "3:41.60",
       player1: ["TFE | Grim", "20YJ82YL"], player2: ["Adnan", "J8CQV2L"],
       player3: ["hgt_1212", "2P82C8PR"], player4: ["TFE | otop", "VRP0RVL"]
   },
 
   team3: {
-      name: "I ate caramel last time", map1time: "1:03.40", map2time: "1:43.50", map3time: "",
-      player1: ["TSK • Shawn", "LUQRQVQ"], player2: ["Snipegirl137", "G9G2YL2"],
-      player3: ["Kaocto", "J82R0P0"], player4: ["Datiger", "LUCLCJG"]
-  },
-
-  team4: {
-      name: "OBLIVION", map1time: "1:03.95", map2time: "1:44.50", map3time: "",
-      player1: ["Nabi", "LCQPULU"], player2: ["Preda", "LCPUV0V"],
-      player3: ["Ciccio Rock", ""], player4: ["speedy", "8P8QLQ8G"]
-  },
-
-  team5: {
-      name: "TDN & Members", map1time: "1:06.75", map2time: "1:47.35", map3time: "",
-      player1: ["VIRGILINHO", "2VRL2PP0"], player2: ["MEPHISTO", "LUPYCVL"],
-      player3: ["SPARTA", "V02JC2L"], player4: ["Hazel", "QUY89UU"]
-  },
-
-  team6: {
-      name: "work in mo.gress", map1time: "1:07.30", map2time: "1:49.95", map3time: "",
-      player1: ["AFK | Xeve", ""], player2: ["nino", "2092VGLY"],
-      player3: ["Kaizer", "G20Q8JY"], player4: ["MCR | Wormo", "QU8VJCQ"]
-  },
-
-  team7: {
-      name: "BL1GHT", map1time: "1:08.20", map2time: "1:52.45", map3time: "",
+      name: "#3 - BL1GHT", map1time: "1:08.20", map2time: "1:52.45", map3time: "3:48.85",
       player1: ["barin", ""], player2: ["LewisM", ""],
       player3: ["于灰", "LU0GVYQ"], player4: ["1天", ""]
   },
 
-  team8: {
-      name: "R.I.P. EGE", map1time: "1:03.90", map2time: "1:52.95", map3time: "",
-      player1: ["KOTS | Sunraku", "J2JQV0Y"], player2: ["KOTS | RedTroop", "Q0P08GR"],
-      player3: ["Falax", "RLL0YYQ"], player4: ["KOTS | Mello", "LCJQYQ9"]
+  team4: {
+      name: "#4 - I ate caramel last time", map1time: "1:03.40", map2time: "1:43.50", map3time: "3:59.95",
+      player1: ["TSK • Shawn", "LUQRQVQ"], player2: ["Snipegirl137", "G9G2YL2"],
+      player3: ["Kaocto", "J82R0P0"], player4: ["Datiger", "LUCLCJG"]
   },
 
-  team9: {
-      name: "KOTS", map1time: "1:03.40", map2time: "1:53.95", map3time: "",
-      player1: ["KOTS | Moros", "R0CLGCQ"], player2: ["KOTS | Hozen", "QU299PY"],
-      player3: ["KOTS | Zeth", "GJJVPP0"], player4: ["KOTS | Yass", ""]
-  },
-
-  team10: {
-      name: "KOTS3", map1time: "1:04.10", map2time: "1:56.30", map3time: "",
-      player1: ["KOTS | Kyros", "2YGR9ULY"], player2: ["KOTS | Crakiiz", "LCUU99J"],
-      player3: ["KOTS | WA_GA_KI", "Q9Y8QRL"], player4: ["KOTS | boubie", "LCR9RPV"]
-  },
-
-  team11: {
-      name: "Goblin Gang", map1time: "1:07.90", map2time: "1:57.90", map3time: "",
+  team5: {
+      name: "#5 - Goblin Gang", map1time: "1:07.90", map2time: "1:57.90", map3time: "4:20.50",
       player1: ["Sly", "LV299C8"], player2: ["Hazard", "JP2QR0Y"],
       player3: ["Xerosis", "RUQVRJG"], player4: ["TRIBEMARK", "QC8VLJP"]
   },
 
+
+  team6: {
+      name: "#6 - OBLIVION", map1time: "1:03.95", map2time: "1:44.50", map3time: "N/A",
+      player1: ["Nabi", "LCQPULU"], player2: ["Preda", "LCPUV0V"],
+      player3: ["Ciccio Rock", ""], player4: ["speedy", "8P8QLQ8G"]
+  },
+
+  team7: {
+      name: "#7 - TDN & Members", map1time: "1:06.75", map2time: "1:47.35", map3time: "N/A",
+      player1: ["VIRGILINHO", "2VRL2PP0"], player2: ["MEPHISTO", "LUPYCVL"],
+      player3: ["SPARTA", "V02JC2L"], player4: ["Hazel", "QUY89UU"]
+  },
+
+  team8: {
+      name: "#8 - work in mo.gress", map1time: "1:07.30", map2time: "1:49.95", map3time: "N/A",
+      player1: ["AFK | Xeve", ""], player2: ["nino", "2092VGLY"],
+      player3: ["Kaizer", "G20Q8JY"], player4: ["MCR | Wormo", "QU8VJCQ"]
+  },
+
+  team9: {
+      name: "#9 - R.I.P. EGE", map1time: "1:03.90", map2time: "1:52.95", map3time: "N/A",
+      player1: ["KOTS | Sunraku", "J2JQV0Y"], player2: ["KOTS | RedTroop", "Q0P08GR"],
+      player3: ["Falax", "RLL0YYQ"], player4: ["KOTS | Mello", "LCJQYQ9"]
+  },
+
+  team10: {
+      name: "#10 - KOTS", map1time: "1:03.40", map2time: "1:53.95", map3time: "N/A",
+      player1: ["KOTS | Moros", "R0CLGCQ"], player2: ["KOTS | Hozen", "QU299PY"],
+      player3: ["KOTS | Zeth", "GJJVPP0"], player4: ["KOTS | Yass", ""]
+  },
+
+  team11: {
+      name: "#11 - KOTS3", map1time: "1:04.10", map2time: "1:56.30", map3time: "N/A",
+      player1: ["KOTS | Kyros", "2YGR9ULY"], player2: ["KOTS | Crakiiz", "LCUU99J"],
+      player3: ["KOTS | WA_GA_KI", "Q9Y8QRL"], player4: ["KOTS | boubie", "LCR9RPV"]
+  },
+
   team12: {
-      name: "SerNikolas", map1time: "1:08.40", map2time: "1:58.55", map3time: "",
+      name: "#12 - SerNikolas", map1time: "1:08.40", map2time: "1:58.55", map3time: "N/A",
       player1: ["JKD", "JCG8Y80"], player2: ["King Dragon", "LVQQVUU"],
       player3: ["nik", "GP8CQ80"], player4: ["Alby", ""]
   }
@@ -206,10 +207,10 @@ function showTeamDetails(team) {
     btn.dataset.tag = tag;
 
     const newBtn = btn.cloneNode(true);
-    /*newBtn.addEventListener('click', () => {
+      newBtn.addEventListener('click', () => {
       const url = "https://mocolytics.com/stats?tag=" + tag;
       window.open(url, "_blank");
-    });*/
+    });
     btn.replaceWith(newBtn);
   }
   document.getElementById('teamDetailsPopup').style.display = 'flex';
