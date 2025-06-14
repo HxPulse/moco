@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const backgrounds = ['bg3.png', 'bg5.png', 'bg7.png'];
   const chosenBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];     /* Random bg on each reload */
-  document.body.style.backgroundImage = `url('../assets/images/backgrounds/${chosenBg}')`;
+  document.body.style.backgroundImage = `url('assets/images/backgrounds/${chosenBg}')`;
 
   const gif = document.getElementById('leftGif');         /* Random gifs */
   const gifs = [

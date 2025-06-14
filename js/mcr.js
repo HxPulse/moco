@@ -140,7 +140,7 @@ function updateGrandTotal() {       // Team total
 
 function getItemImage(name) {
   const filename = name.replace(/[^a-z0-9]/gi, '_') + ".png";
-  return `../assets/images/items/${filename}`;
+  return `assets/images/items/${filename}`;
 }
 
 function openItemPopup(type, clickedBtn) {
@@ -233,7 +233,7 @@ document.querySelectorAll('.popup').forEach(popup => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {   // changing image background
-  const backgrounds = Array.from({ length: 9 }, (_, i) => `../assets/images/backgrounds/bg${i}.png`);
+  const backgrounds = Array.from({ length: 9 }, (_, i) => `assets/images/backgrounds/bg${i}.png`);
   let currentIndex = 0;
 
   const btn = document.getElementById('bgCycleBtn');
