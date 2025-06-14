@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>MCR Build Maker by HX</title>
+        <link rel="icon" type="image/gif" href="assets/images/gifs/favicon.gif"/>
+        <link rel="stylesheet" href="css/mcr.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    </head>
+    <body>
+        <h1 class="boxed">MCR Finals Build Maker</h1>
+
+        <div class="build-container">
+            <div class="build">
+                <div class="player-title">
+                    <input type="text" value="Player 1" class="player-name-input"/>
+                </div><br/>
+
+                <div class="item-row">
+                    <div class="weaponBtn clickable-label">Weapon</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderWeapon.png" alt="Select a weapon">
+                    <span class="value-display">0</span>
+                </div>
+                <hr class="separator"/>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 1</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 2</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 3</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+                <hr class="separator"/>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 1</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 2</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 3</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+                <hr class="separator"/>
+
+                <div class="total">Total: <span class="totalValue">0</span></div>
+            </div>
+
+            <div class="build">
+                <div class="player-title">
+                    <input type="text" value="Player 2" class="player-name-input"/>
+                </div><br/>
+
+                <div class="item-row">
+                    <div class="weaponBtn clickable-label">Weapon</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderWeapon.png" alt="Select a weapon">
+                    <span class="value-display">0</span>
+                </div>
+                <hr class="separator"/>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 1</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 2</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 3</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <hr class="separator"/>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 1</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 2</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 3</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <hr class="separator"/>
+                <div class="total">Total: <span class="totalValue">0</span></div>
+            </div>
+
+            <div class="build">
+                <div class="player-title">
+                    <input type="text" value="Player 3" class="player-name-input"/>
+                </div><br/>
+
+                <div class="item-row">
+                    <div class="weaponBtn clickable-label">Weapon</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderWeapon.png" alt="Select a weapon">
+                    <span class="value-display">0</span>
+                </div>
+                <hr class="separator"/>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 1</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 2</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 3</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <hr class="separator"/>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 1</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 2</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 3</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <hr class="separator"/>
+                <div class="total">Total: <span class="totalValue">0</span></div>
+            </div>
+
+            <div class="build">
+                <div class="player-title">
+                    <input type="text" value="Player 4" class="player-name-input"/>
+                </div><br/>
+
+                <div class="item-row">
+                    <div class="weaponBtn clickable-label">Weapon</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderWeapon.png" alt="Select a weapon">
+                    <span class="value-display">0</span>
+                </div>
+                <hr class="separator"/>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 1</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 2</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="gadgetBtn clickable-label">Gadget 3</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderGadget.png" alt="Select a gadget">
+                    <span class="value-display">0</span>
+                </div>
+
+                <hr class="separator"/>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 1</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 2</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <div class="item-row">
+                    <div class="passiveBtn clickable-label">Passive 3</div>
+                    <img class="itemImgPreview" src="assets/images/items/placeholderPassive.png" alt="Select a passive">
+                    <span class="value-display">0</span>
+                </div>
+
+                <hr class="separator"/>
+                <div class="total">Total: <span class="totalValue">0</span></div>
+            </div>
+
+        </div><br/>
+
+        <div class="grand-total boxed">
+            Team Total: <span id="grandTotalValue">0</span>
+        </div>
+
+        <div class="images-container">
+            <img src="assets/images/MCRitems3.png" alt="MCRitems"/>
+        </div>
+
+        <div class="blButtonsContainer">
+            <button id="bgCycleBtn" class="blButtons bgCycleBtn">by HX - change background</button>
+            <button id="clipboardBtn" class="blButtons clipboardBtn">Copy builds</button>
+            <button id="lbBtn" class="blButtons lbBtn">Finalists</button>
+        </div>
+
+        <div id="weaponPopup" class="popup hideRest" style="display: none;">
+            <div class="popup-content">
+                <div class="weapon-options"></div>
+            </div>
+        </div>
+
+        <div id="gadgetPopup" class="popup hideRest" style="display: none;">
+            <div class="popup-content">
+                <div class="gadget-options"></div>
+            </div>
+        </div>
+
+        <div id="passivePopup" class="popup hideRest" style="display: none;">
+            <div class="popup-content">
+                <div class="passive-options"></div>
+            </div>
+        </div>
+
+        <div id="finalistsPopup" class="finalistsPopup popup hideRest" style="display: none;">
+            <div class="finalistsPopup-content">
+                <h2 class="boxed">Your MCR Finalists</h2>
+                <div id="finalistsButtons"></div>
+            </div>
+        </div>
+
+        <div id="teamDetailsPopup" class="popup hideRest" style="display: none;">
+            <div class="popup-content">
+                <h2 id="teamName" class="boxed">Team Name</h2>
+                <div id="mapTimes">
+                    <div><strong>Street Fight:</strong> <span id="map1time"></span></div>
+                    <div><strong>Van Defense:</strong> <span id="map2time"></span></div>
+                    <div><strong>Rooftop Rumble:</strong> <span id="map3time"></span></div>
+                </div>
+                <div id="playerButtons">
+                    <button class="ignBtn"></button>
+                    <button class="ignBtn"></button>
+                    <button class="ignBtn"></button>
+                    <button class="ignBtn"></button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/mcr.js"></script>
+    </body>
+</html>

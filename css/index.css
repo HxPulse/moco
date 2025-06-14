@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-size: cover;
+  background-position: center;              /* To stabilize the bg image */
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;                /* Background fits the whole screen */
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;         /* All of these are basically to make sure the whole page is responsive */
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 2rem;                /* more padding for bigger screen */
+  box-sizing: border-box;
+}
+
+body::before {       /* Dark overlay for visibility */
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;              /* Inside content */
+  text-shadow: 0 0 0.7rem rgba(0,0,0,0.8);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+
+  border: 0.25rem solid rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;        /* Border */
+  display: inline-block;
+}
+
+button {
+  display: block;
+  width: 50%;           /* So width is good on responsive */
+  max-width: 25rem;
+  margin: 0.75rem auto;
+  padding: 0.9rem 0;
+  font-size: 1.5rem;            /* Margins and paddings */
+  font-weight: 600;
+  color: #eee;
+  background: rgba(20, 25, 35, 0.85);
+  border: 2.5px solid white;        /* Borders */
+  border-radius: 1.5rem;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+button:hover {          /* Switching text content and border color on hover */
+  background: #eee;
+  color: rgba(20, 25, 35, 0.85);
+  border: 2.5px solid rgba(20, 25, 35, 0.85);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#leftGif {      /* Random gif appearing on the left */
+  position: fixed;
+  bottom: 50%;
+  left: 0%;
+  width: 5%;
+  height: auto;
+  pointer-events: none;
+  z-index: -1;
+  display: none
+}
+
+/* Luna */
+.luna-overlay {
+  position: fixed;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 27%;      /* Smaller relative size for desktop */
+  animation: lunaZoomInOut 10s infinite ease-in-out;
+  z-index: -2;
+  pointer-events: none;
+}
+
+@keyframes lunaZoomInOut {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-size: cover;
+  background-position: center;      /* To stabilize the bg image */
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;            /* Background fits the whole screen */
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;           /* All of these are basically to make sure the whole page is responsive */
+  justify-content: flex-start;
+  text-align: center;
+  padding: 1.25rem;                  /* ~20px */
+  box-sizing: border-box;
+}
+
+body::before {      /* Dark overlay for visibility */
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+h1 {
+  font-size: 2rem;
+  color: #fff;                  /* Inside content */
+  text-shadow: 0 0 0.5rem rgba(0,0,0,0.7);
+  margin-bottom: 1.875rem;
+  font-weight: 700;
+
+  border: 0.2rem solid rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;         /* Border */
+  display: inline-block;
+}
+
+button {
+  display: block;
+  width: 80%;
+  max-width: 15rem;             /* So width is good on responsive */
+  margin: 0.625rem auto;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;            /* Margins and paddings */
+  font-weight: 600;
+  color: #eee;
+  background: rgba(20, 25, 35, 0.85);
+  border: 0.5px solid white;
+  border-radius: 1.5rem;        /* Borders */
+  cursor: pointer;
+  box-shadow: none;
+}
+
+#leftGif {          /* Random gif appearing on the left */
+  position: fixed;
+  bottom: 50%;
+  left: 0%;
+  width: 20%;
+  height: auto;
+  pointer-events: none;
+  z-index: -1;
+  display: none
+}
+
+/* Luna */
+.luna-overlay {
+  position: fixed;
+  bottom: -4%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 80%;          /* Bigger relative size on smaller screen */
+  animation: lunaZoomInOut 10s infinite ease-in-out;
+  z-index: -2;
+  pointer-events: none;
+}
+
+@keyframes lunaZoomInOut {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+}
