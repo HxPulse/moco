@@ -67,7 +67,7 @@ function createAutocompleteList() {
       const div = document.createElement("div");
       div.className = "autocomplete-item";
       div.innerHTML = `
-        <img src="assets/images/items/${item.name.toLowerCase().replace(/[^a-z0-9]/gi, "_")}.png" />
+        <img src="assets/images/items/${item.name.replace(/[^a-z0-9]/gi, "_")}.png" />
         <span>${item.name}</span>
       `;
       div.addEventListener("click", () => handleGuess(item));
@@ -165,7 +165,7 @@ function handleGuess(item) {
   });
   guessHistory.push(getEmojiRow(item, itemToGuess));
   row.innerHTML = `
-    <div class="guess-box"><img src="assets/images/items/${item.name.toLowerCase().replace(/[^a-z0-9]/gi, "_")}.png" alt="${item.name}"></div>
+    <div class="guess-box"><img src="assets/images/items/${item.name.replace(/[^a-z0-9]/gi, "_")}.png" alt="${item.name}"></div>
     ${cells.join("")}
   `;
 
