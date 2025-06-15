@@ -20,7 +20,7 @@ const items = [
   { name: "Unstable Lazer", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "lv 10" },
   { name: "Explode-O-Matic", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "lv 11" },
   { name: "R&B Mixtape", type: "passive", cd: "0", doesDmg: false, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "lv 13" },
-  { name: "Unstable Beam", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "AoE", unlocked: "lv 22" },
+  { name: "Unstable Beam", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "lv 22" },
   { name: "Unstable Lightning", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "lv 18" },
   { name: "Healthy Snacks", type: "passive", cd: "0", doesDmg: false, hasHeal: false, range: "no", AoE: "single<br>target", unlocked: "lv 27" },
   { name: "Healing Charm", type: "passive", cd: "0", doesDmg: false, hasHeal: true, range: "no", AoE: "both", unlocked: "lv 28" },
