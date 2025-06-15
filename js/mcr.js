@@ -28,7 +28,7 @@ const passives = {
     "Auto Zapper": 30,
     "Healthy Snacks": 30,
     "Healing Charm": 30,
-    "Explode-O-Matic": 20,
+    "Explode-O-Matic Trigger": 20,
     "Smelly Socks": 20,
     "Vampire Teeth": 20,
     "R&B Mixtape": 20
