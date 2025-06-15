@@ -11,9 +11,9 @@ const items = [
   { name: "Jaded Blades", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "single<br>target", unlocked: "lv 25" },
   { name: "Spinsickle", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "lv 29" },
   { name: "Buzz-Kill", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "single<br>target", unlocked: "one<br>on<br>one" },
-  { name: "Singularity", type: "weapon", cd: "0", doesDmg: true, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "elite" },
-  { name: "Hornbow", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "AoE", unlocked: "elite" },
-  { name: "Poison Bow", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "both", unlocked: "elite" },
+  { name: "Singularity", type: "weapon", cd: "0", doesDmg: true, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "unreleased" },
+  { name: "Hornbow", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "AoE", unlocked: "unreleased" },
+  { name: "Poison Bow", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "both", unlocked: "unreleased" },
   { name: "Auto Zapper", type: "passive", cd: "3", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "lv 1" },
   { name: "Vampire Teeth", type: "passive", cd: "0", doesDmg: false, hasHeal: true, range: "no", AoE: "single<br>target", unlocked: "lv 5" },
   { name: "Smelly Socks", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "lv 7" },
@@ -25,12 +25,12 @@ const items = [
   { name: "Healthy Snacks", type: "passive", cd: "0", doesDmg: false, hasHeal: false, range: "no", AoE: "single<br>target", unlocked: "lv 27" },
   { name: "Healing Charm", type: "passive", cd: "0", doesDmg: false, hasHeal: true, range: "no", AoE: "both", unlocked: "lv 28" },
   { name: "Chicken-O-Matic", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "single<br>target", unlocked: "helping<br>hands" },
-  { name: "Cactus Charm", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "elite" },
-  { name: "Pocket Airbag", type: "passive", cd: "10", doesDmg: false, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "elite" },
-  { name: "Gadget Battery", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "single<br>target", unlocked: "elite" },
+  { name: "Cactus Charm", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "unreleased" },
+  { name: "Pocket Airbag", type: "passive", cd: "10", doesDmg: false, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "unreleased" },
+  { name: "Gadget Battery", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "single<br>target", unlocked: "unreleased" },
   { name: "Splash Heal", type: "gadget", cd: "16", doesDmg: false, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "lv 1" },
   { name: "Smart Fireworks", type: "gadget", cd: "20", doesDmg: true, hasHeal: false, range: "very long", AoE: "AoE", unlocked: "lv 1" },
-  { name: "Boombox", type: "gadget", cd: "12", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "4" },
+  { name: "Boombox", type: "gadget", cd: "12", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "lv 4" },
   { name: "Vitamin Shot", type: "gadget", cd: "10", doesDmg: false, hasHeal: true, range: "no", AoE: "single<br>target", unlocked: "lv 9" },
   { name: "Monster Taser", type: "gadget", cd: "5", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "lv 12" },
   { name: "Pepper Spray", type: "gadget", cd: "14", doesDmg: true, hasHeal: false, range: "long", AoE: "AoE", unlocked: "lv 14" },
@@ -43,9 +43,9 @@ const items = [
   { name: "Revitalizing Mist", type: "gadget", cd: "8", doesDmg: false, hasHeal: true, range: "long", AoE: "single<br>target", unlocked: "lv 24" },
   { name: "Really Cool Sticker", type: "gadget", cd: "20", doesDmg: true, hasHeal: false, range: "no", AoE: "single<br>target", unlocked: "rooftop<br>rumble" },
   { name: "Shelldon", type: "gadget", cd: "30", doesDmg: true, hasHeal: false, range: "melee", AoE: "single<br>target", unlocked: "tournament<br>grounds" },
-  { name: "Very Mean Pendant", type: "gadget", cd: "10", doesDmg: true, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "elite" },
-  { name: "Feel-Better Bloom", type: "gadget", cd: "20", doesDmg: false, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "elite" },
-  { name: "P.E.W 3000", type: "gadget", cd: "30", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "elite" }
+  { name: "Very Mean Pendant", type: "gadget", cd: "10", doesDmg: true, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "unreleased" },
+  { name: "Feel-Better Bloom", type: "gadget", cd: "20", doesDmg: false, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "unreleased" },
+  { name: "P.E.W 3000", type: "gadget", cd: "30", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "unreleased" }
 ];
 let remainingItems = [...items];
 let attemptCount = 0;
@@ -84,7 +84,7 @@ function handleGuess(item) {
   const rangeOrder = { "melee": 0, "long": 1, "very long": 2 };
   const fields = ["type", "cd", "doesDmg", "hasHeal", "range", "AoE", "unlocked"];
   const unlockedOrder = { "helping<br>hands": 0, "one<br>on<br>one": 1, "rooftop<br>rumble": 2,
-    "tournament<br>grounds": 3, "elite": 4
+    "tournament<br>grounds": 3, "unreleased": 4
   };
 
   const cells = fields.map(field => {
@@ -194,7 +194,7 @@ function getEmojiRow(item, itemToGuess) {
     "one<br>on<br>one": 1,
     "rooftop<br>rumble": 2,
     "tournament<br>grounds": 3,
-    "elite": 4
+    "unreleased": 4
   };
   const fields = ["type", "cd", "doesDmg", "hasHeal", "range", "AoE", "unlocked"];
 
