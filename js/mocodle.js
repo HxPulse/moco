@@ -18,7 +18,7 @@ const items = [
   { name: "Vampire Teeth", type: "passive", cd: "0", doesDmg: false, hasHeal: true, range: "no", AoE: "single<br>target", unlocked: "lv 5" },
   { name: "Smelly Socks", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "lv 7" },
   { name: "Unstable Lazer", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "lv 10" },
-  { name: "Explode-O-Matic Trigger", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "lv 11" },
+  { name: "Explode-O-Matic", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "lv 11" },
   { name: "R&B Mixtape", type: "passive", cd: "0", doesDmg: false, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "lv 13" },
   { name: "Unstable Beam", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "AoE", unlocked: "lv 22" },
   { name: "Unstable Lightning", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "lv 18" },
