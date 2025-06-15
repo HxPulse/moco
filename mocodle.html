@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>moco.dle by HX</title>
+        <link rel="stylesheet" href="css/mocodle.css" media="(min-width: 768px)">
+        <link rel="stylesheet" href="css/mocodle-mobile.css" media="(max-width: 767px)">
         <link rel="icon" type="image/gif" href="assets/images/gifs/favicon.gif" />
-        <link rel="stylesheet" href="css/mocodle.css">
     </head>
 
     <body>
 
-        <h1>THERES NOTHING TO SEE HERE (yet)</h1>
+        <div class="main-container">
+            <h1>moco.dle BETA 🚧</h1>
+            <h2>Will you guess today's item?</h2>
+            <input type="text" id="item-search" placeholder="Type to guess..." autocomplete="off" autofocus>
+            <div id="autocomplete-list" class="autocomplete-items"></div>
+        </div><br/>
+
+        <div id="guesses-container">
+            <div id="guesses-header" class="guess-row">
+                <div class="guess-box">Item</div>
+                <div class="guess-box">Type</div>
+                <div class="guess-box">Cooldown</div>
+                <div class="guess-box">Does<br>damage ?</div>
+                <div class="guess-box">Has<br>healing ?</div>
+                <div class="guess-box">Range</div>
+                <div class="guess-box">AoE /<br>single target</div>
+                <div class="guess-box">Unlock</div>
+            </div>
+        </div>
+
+        <div id="win-popup" class="popup" style="display:none;">
+            <div class="popup-content" id="win-popup-content"></div>
+            <div class="popup-buttons">
+                <button onclick="copyResult()">📋 Copy Result</button>
+                <button onclick="window.location.href='index.html'">🏠 Back to Hub</button>
+                <button onclick="closePopup()">❌ Close</button>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 2rem 0;">
+            <button onclick="window.location.href='index.html'" class="btn-home">Cool 🚀 Zone</button>
+        </div>
 
         <script src="js/mocodle.js"></script>
     </body>
