@@ -32,7 +32,7 @@ const items = [
   { name: "Smart Fireworks", type: "gadget", cd: "20", doesDmg: true, hasHeal: false, range: "very long", AoE: "AoE", unlocked: "lv 1" },
   { name: "Boombox", type: "gadget", cd: "12", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "lv 4" },
   { name: "Vitamin Shot", type: "gadget", cd: "10", doesDmg: false, hasHeal: true, range: "no", AoE: "single<br>target", unlocked: "lv 9" },
-  { name: "Monster Taser", type: "gadget", cd: "5", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "lv 12" },
+  { name: "Monster Taser", type: "gadget", cd: "6", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "lv 12" },
   { name: "Pepper Spray", type: "gadget", cd: "14", doesDmg: true, hasHeal: false, range: "long", AoE: "AoE", unlocked: "lv 14" },
   { name: "Snow Globe", type: "gadget", cd: "30", doesDmg: true, hasHeal: false, range: "long", AoE: "AoE", unlocked: "lv 18" },
   { name: "Life Jacket", type: "gadget", cd: "15", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "lv 19" },

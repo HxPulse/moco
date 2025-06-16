@@ -8,8 +8,9 @@ const items = [
   { name: "Boombox"}, { name: "Vitamin Shot"}, { name: "Monster Taser"}, { name: "Pepper Spray"}, { name: "Snow Globe"},
   { name: "Life Jacket"}, { name: "Multi Zapper"}, { name: "Spicy Dagger"}, { name: "Explosive 6-Pack"},
   { name: "Super Loud Whistle"}, { name: "Revitalizing Mist"}, { name: "Really Cool Sticker"}, { name: "Shelldon"},
+  { name: "Auto Zapper"}
 ];
-/* { name: "Hornbow"}, { name: "Poison Bow"}, { name: "Auto Zapper"}, { name: "Singularity"}, { name: "P.E.W 3000"},
+/* { name: "Hornbow"}, { name: "Poison Bow"}, , { name: "Singularity"}, { name: "P.E.W 3000"},
 { name: "Feel-Better Bloom"}, { name: "Very Mean Pendant"}, { name: "Cactus Charm"}, { name: "Pocket Airbag"},
 { name: "Gadget Battery"}, */
 let remainingItems = [...items];
