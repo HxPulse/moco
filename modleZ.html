@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>mo.dle by HX</title>
+        <link rel="stylesheet" href="css/modleZ.css">
+        <link rel="icon" type="image/gif" href="assets/images/gifs/favicon.gif" />
+    </head>
+
+    <body>
+
+        <div class="main-container">
+            <h1>mo.dle<br>Zoom BETA 🚧</h1>
+            <h2>Will you guess today's item?</h2>
+
+            <div id="item-image" class="item-image">
+                <div id="zoomed-image-wrapper"></div>
+            </div>
+
+            <input type="text" id="item-search" placeholder="Type to guess..." autocomplete="off" autofocus>
+            <div id="autocomplete-list" class="autocomplete-items"></div>
+            <div id="guessed-items" class="guessed-items"></div>
+
+        </div>
+
+        <div id="win-popup" class="popup" style="display:none;">
+            <div class="popup-content" id="win-popup-content"></div>
+            <div class="popup-buttons">
+                <button onclick="copyResult()">📋 Copy Result</button>
+                <button onclick="window.location.href='modle.html'">🧩 Play mo.dle Classic</button>
+                <button onclick="closePopup()">❌ Close</button>
+            </div>
+        </div>
+        <div>
+            <button onclick="window.location.href='index.html'" class="btn-home">Cool 🚀 Zone</button>
+        </div>
+
+        <script src="js/modleZ.js"></script>
+    </body>
+</html>

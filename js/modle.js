@@ -11,10 +11,10 @@ const items = [
   { name: "Jaded Blades", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "single<br>target", unlocked: "lv 25" },
   { name: "Spinsickle", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "lv 29" },
   { name: "Buzz-Kill", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "single<br>target", unlocked: "one<br>on<br>one" },
-  { name: "Singularity", type: "weapon", cd: "0", doesDmg: true, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "unreleased" },
+  { name: "Singularity", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "unreleased" },
   { name: "Hornbow", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "AoE", unlocked: "unreleased" },
   { name: "Poison Bow", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "both", unlocked: "unreleased" },
-  { name: "Auto Zapper", type: "passive", cd: "3", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "lv 1" },
+  { name: "Auto Zapper", type: "passive", cd: "3", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "lv 1" },
   { name: "Vampire Teeth", type: "passive", cd: "0", doesDmg: false, hasHeal: true, range: "no", AoE: "single<br>target", unlocked: "lv 5" },
   { name: "Smelly Socks", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "AoE", unlocked: "lv 7" },
   { name: "Unstable Lazer", type: "passive", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "both", unlocked: "lv 10" },
@@ -239,7 +239,7 @@ function getEmojiRow(item, itemToGuess) {
 }
 
 function copyResult() {
-  let result = `I found the moco.dle item in ${attemptCount} ${attemptCount === 1 ? "try" : "tries"}!\n\n`;
+  let result = `I found the mo.dle item in ${attemptCount} ${attemptCount === 1 ? "try" : "tries"}!\n\n`;
   result += guessHistory.join("\n");
 
   navigator.clipboard.writeText(result).then(() => {

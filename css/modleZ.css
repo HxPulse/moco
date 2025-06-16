@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main-container {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -3%);
+  text-align: center;
+  width: 82%; /* responsive container */
+  max-width: 600px; /* prevents it from stretching too much on tablets */
+}
+
+h1 {
+  font-size: 2.2rem; /* downscaled for mobile */
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  padding: 0.7rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/*   ===============DROPDOWN MENU================    */
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  max-height: 40vh;
+  overflow-y: auto;
+  z-index: 99;
+  width: 80%; /* match input width */
+  left: 10%
+}
+
+.autocomplete-item {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background-color: #eee;
+}
+
+.autocomplete-item img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 0.6rem;
+}
+
+.guessed-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.guessed-items img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+/*   ================IMAGE================    */
+
+.item-image {
+  width: min(40vw, 200px);
+  aspect-ratio: 1 / 1;
+  margin: 1rem auto;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-size: 1000%; /* 10x zoom */
+  background-repeat: no-repeat;
+}
+
+#zoomed-image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*   ================WIN POPUP================    */
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(34, 34, 34, 0.95);
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem #000;
+  font-size: 1.25rem;
+  z-index: 1000;
+  width: 90vw;
+  max-width: 400px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes buttons down */
+  padding: 1.5em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.popup-content {
+  overflow-y: auto;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.popup-buttons button {
+  padding: 0.5em 1.2em;
+  font-size: 1rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-home {
+  display: block;
+  width: 50%;
+  max-width: none;
+  margin: 0.5rem auto;
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(20, 25, 35, 0.85);
+  background: #eee;
+  border: 2.5px solid rgba(20, 25, 35, 0.85);
+  border-radius: 1.5rem;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+/* ================ DESKTOP / COMPUTER STYLES ================ */
+@media (min-width: 1024px) {
+  body {
+    background-color: #eaeaea;
+  }
+
+  .main-container {
+    max-width: 800px;
+    transform: translate(-50%, 0%);
+    margin-top: 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  input[type="text"] {
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-width: 2.5px;
+    width: 70%;
+  }
+
+  .autocomplete-items {
+    width: 60%;
+    left: 20%;
+  }
+
+  .autocomplete-item img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .guessed-items img {
+    width: 64px;
+    height: 64px;
+    border-width: 2.5px;
+  }
+
+  .item-image {
+    width: 240px;
+    border-width: 3px;
+  }
+
+  .popup {
+    max-width: 500px;
+    font-size: 1.35rem;
+    padding: 2em;
+  }
+
+  .popup-buttons button {
+    font-size: 1.1rem;
+    padding: 0.75em 1.5em;
+  }
+
+  .btn-home {
+    margin-top: 1.5%;
+    width: 15%;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    border-width: 3px;
+  }
+}
