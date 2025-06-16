@@ -234,10 +234,17 @@ input[type="text"] {
   }
 
   .btn-home {
-    margin-top: 1.5%;
+    margin-top: 0.75%;
     width: 15%;
     font-size: 1.1rem;
     padding: 1rem 0;
     border-width: 3px;
+  }
+
+  .btn-home:hover {
+    background: rgba(20, 25, 35, 0.85);
+    color: #eee;
+    border: 2.5px solid white;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   }
 }
