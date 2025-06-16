@@ -176,8 +176,8 @@ function handleGuess(item) {
     const popup = document.getElementById("win-popup");
     const content = document.getElementById("win-popup-content");
     content.innerText = attemptCount === 1
-      ? "Congrats!\nYou found the item first try\n🎉🎉🎉"
-      : `Congrats!\nYou found the item in ${attemptCount} tries\n🎉🎉🎉`;
+      ? "Congrats!\nYou found the item first try\n🎉🎉"
+      : `Congrats!\nYou found the item in ${attemptCount} tries\n🎉🎉`;
     popup.style.display = "block";
   }
 

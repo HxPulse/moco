@@ -67,8 +67,8 @@ function handleGuess(item) {
 
     content.innerHTML = `
       <p>${attemptCount === 1
-        ? "Congrats!<br>You found the item first try 🎉"
-        : `Congrats!<br>You found the item in ${attemptCount} tries 🎉`}
+        ? "Congrats!<br>You found the item first try 🎉🎉"
+        : `Congrats!<br>You found the item in ${attemptCount} tries 🎉🎉`}
       </p>
       <img src="assets/images/items/${item.name.replace(/[^a-z0-9]/gi, "_")}.png"
            alt="${item.name}"
@@ -99,7 +99,7 @@ function closePopup() {
 }
 
 function copyResult() {
-  let result = `I found the mo.dle Zoomed item in ${attemptCount} ${attemptCount === 1 ? "try" : "tries"}!\n\n`;
+  let result = `I found the mo.dle Zoomed item in ${attemptCount} ${attemptCount === 1 ? "try" : "tries"}!`;
   result += guessHistory.join("\n");
 
   navigator.clipboard.writeText(result).then(() => {
