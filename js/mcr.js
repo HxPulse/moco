@@ -111,7 +111,6 @@ const finalists = {
   }
 };
 
-
 /*** FUNCTIONS ***/
 
 function getValue(name) {       // retrieves selected item value
@@ -250,20 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {   // changing image backgr
   document.body.style.backgroundSize = 'cover';
   document.body.style.backgroundRepeat = 'no-repeat';
   document.body.style.backgroundPosition = 'center center';
-});
-
-document.getElementById('clipboardBtn').addEventListener('click', () => {
-  const target = document.querySelector('.build-container');
-
-  html2canvas(target, { backgroundColor: null }).then(canvas => {
-    canvas.toBlob(blob => {
-      if (!blob) return alert("Screenshot failed!");
-      const item = new ClipboardItem({ 'image/png': blob });
-      navigator.clipboard.write([item])
-        .then(() => alert('Screenshot copied to clipboard!'))
-        .catch(err => alert('Copy failed: ' + err));
-    });
-  });
 });
 
 document.getElementById('lbBtn').addEventListener('click', () => {

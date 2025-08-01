@@ -15,8 +15,7 @@ const items = [
 
 let remainingItems = [...items];
 let attemptCount = 0;
-const guessHistory = [];
-const itemToGuess = items[Math.floor(Math.random() * items.length)];
+const itemToGuess = getDailyItem(items);
 console.log(itemToGuess);
 const input = document.getElementById("item-search");
 const list = document.getElementById("autocomplete-list");
@@ -36,6 +35,29 @@ zoomedImage.style.backgroundImage = `url(${imgPath})`;
 zoomedImage.style.backgroundSize = `${currentZoom}%`; // 10x zoom
 zoomedImage.style.backgroundPosition = `${offsetX}% ${offsetY}%`;
 zoomedImage.style.backgroundRepeat = "no-repeat";
+
+// Item for the day
+
+function getDateUTC2() {
+  const now = new Date();
+  const utc2 = new Date(now.getTime() + (26 * 60 + now.getTimezoneOffset()) * 60000);
+  return utc2.toISOString().split('T')[0];
+}
+
+function hashString(str) {      // Hash function
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = (hash << 5) - hash + str.charCodeAt(i);
+    hash |= 0; // Convert to 32bit integer
+  }
+  return Math.abs(hash);
+}
+
+function getDailyItem() {
+  const dateStr = getDateUTC2();
+  const index = hashString(dateStr) % items.length;
+  return items[index];
+}
 
 function createAutocompleteList() {
   list.style.display = "block"; // show again when typing
@@ -100,8 +122,8 @@ function closePopup() {
 }
 
 function copyResult() {
-  let result = `I found the mo.dle Zoomed item in ${attemptCount} ${attemptCount === 1 ? "try" : "tries"}!`;
-  result += guessHistory.join("\n");
+  let result = `I found the mo.dle Zoomed item in ${attemptCount} ${attemptCount === 1 ? "try" : "tries"}!\n`;
+  result += "https://hxpulse.github.io/moco/modleZ.html"
 
   navigator.clipboard.writeText(result).then(() => {
     alert("Result copied to clipboard!");
