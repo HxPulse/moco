@@ -51,7 +51,6 @@ let remainingItems = [...items];
 let attemptCount = 0;
 const guessHistory = [];
 const itemToGuess = getDailyItem();
-console.log(itemToGuess);
 const input = document.getElementById("item-search");
 const list = document.getElementById("autocomplete-list");
 const guessesContainer = document.getElementById("guesses");
