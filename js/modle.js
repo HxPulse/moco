@@ -4,7 +4,7 @@ const items = [
   { name: "Wolf Stick", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "single<br>target", unlocked: "8" },
   { name: "Staff of Good Vibes", type: "weapon", cd: "0", doesDmg: true, hasHeal: true, range: "long", AoE: "AoE", unlocked: "9" },
   { name: "Toothpick & Shield", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "melee", AoE: "single<br>target", unlocked: "12" },
-  { name: "Portable Portal", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "single<br>target", unlocked: "15" },
+  { name: "Portable Portal", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "AoE", unlocked: "15" },
   { name: "CPU Bomb", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "very long", AoE: "AoE", unlocked: "16" },
   { name: "Speedshot", type: "weapon", cd: "0", doesDmg: true, hasHeal: false, range: "long", AoE: "single<br>target", unlocked: "17" },
   { name: "Medicine Ball", type: "weapon", cd: "0", doesDmg: true, hasHeal: true, range: "melee", AoE: "AoE", unlocked: "23" },
