@@ -22,7 +22,7 @@ const guessesContainer = document.getElementById("guesses");
 const zoomedImage = document.getElementById("zoomed-image-wrapper");
 const imgPath = `assets/images/items/${itemToGuess.name.replace(/[^a-z0-9]/gi, "_")}.png`;
 let currentZoom = 900; // starting at 1000%
-const zoomStep = 70;   // decrease by 100% on each wrong guess
+const zoomStep = 75;   // decrease by 100% on each wrong guess
 const minZoom = 100;    // minimum zoom 100%
 
 // Random offset between 0% and 90% (so the zoom box doesn't go out of bounds)
