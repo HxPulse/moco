@@ -1,37 +1,58 @@
 /*** ITEMS ***/
 
 const weapons = {
-    "Spinsickle": 100,
+    "Portable Portal": 100,
+    "Techno Fists": 100,
+    "Spinsickle": 90,
+    "CPU Bomb": 80,
     "Speedshot": 70,
-    "Jaded Blades": 60,
-    "Toothpick & Shield": 30
+    "Jaded Blades": 70,
+    "Poison Bow": 60,
+    "Toothpick & Shield": 40,
+    "Monster Slugger": 30,
+    "Singularity": 30,
+    "Wolf Stick": 20,
+    "Buzz-Kill": 20,
+    "Staff of Good Vibes": 10,
+    "Medicine Ball": 10
 };
 
 const gadgets = {
-    "Snow Globe": 50,
-    "Super Loud Whistle": 50,
-    "Multi Zapper": 50,
-    "Smart Fireworks": 40,
-    "Pepper Spray": 40,
-    "Boombox": 30,
-    "Vitamin Shot": 30,
-    "Splash Heal": 30,
-    "Really Cool Sticker": 20,
-    "Monster Taser": 20,
-    "Spicy Dagger": 20
+    "Snow Globe": 80,
+    "Multi Zapper": 70,
+    "Smart Fireworks": 70,
+    "Pepper Spray": 70,
+    "Boombox": 50,
+    "P.E.W 3000": 50,
+    "Very Mean Pendant": 50,
+    "Super Loud Whistle": 40,
+    "Really Cool Sticker": 40,
+    "Monster Taser": 30,
+    "Shelldon": 30,
+    "Vitamin Shot": 10,
+    "Splash Heal": 10,
+    "Revitalizing Mist": 10,
+    "Spicy Dagger": 10,
+    "Life Jacket": -20,
+    "Feel-Better Bloom": -20,
+    "Explosive 6-Pack": -20
 };
 
 const passives = {
-    "Unstable Lightning": 50,
+    "Unstable Lightning": 60,
+    "Unstable Lazer": 60,
     "Unstable Beam": 50,
-    "Unstable Lazer": 50,
-    "Auto Zapper": 30,
-    "Healthy Snacks": 30,
-    "Healing Charm": 30,
-    "Explode-O-Matic": 20,
-    "Smelly Socks": 20,
-    "Vampire Teeth": 20,
-    "R&B Mixtape": 20
+    "Explode-O-Matic": 50,
+    "Smelly Socks": 30,
+    "Gadget Battery": 30,
+    "Cactus Charm": 30,
+    "Auto Zapper": 20,
+    "Chicken-o-Matic": 20,
+    "Healthy Snacks": 10,
+    "Healing Charm": 10,
+    "Vampire Teeth": 10,
+    "R&B Mixtape": 10,
+    "Pocket Airbag": -20,
 };
 
 /*** FINALISTS ***/
@@ -251,24 +272,24 @@ document.addEventListener('DOMContentLoaded', () => {   // changing image backgr
   document.body.style.backgroundPosition = 'center center';
 });
 
-document.getElementById('lbBtn').addEventListener('click', () => {
-  const container = document.getElementById('finalistsButtons');
-  container.innerHTML = ''; // clear old buttons
-
-  for (const key in finalists) {        // Create buttons for each team
-    const team = finalists[key];
-    const btn = document.createElement('button');
-    btn.textContent = team.name;
-    btn.dataset.teamKey = key; // store the key for later use
-    container.appendChild(btn);
-
-    btn.addEventListener('click', () => {
-      showTeamDetails(finalists[key]);
-      document.getElementById('finalistsPopup').style.display = 'none';
-    });
-  }
-  document.getElementById('finalistsPopup').style.display = 'block';
-});
+//document.getElementById('lbBtn').addEventListener('click', () => {
+//  const container = document.getElementById('finalistsButtons');
+//  container.innerHTML = ''; // clear old buttons
+//
+//  for (const key in finalists) {        // Create buttons for each team
+//    const team = finalists[key];
+//    const btn = document.createElement('button');
+//    btn.textContent = team.name;
+//    btn.dataset.teamKey = key; // store the key for later use
+//    container.appendChild(btn);
+//
+//    btn.addEventListener('click', () => {
+//      showTeamDetails(finalists[key]);
+//      document.getElementById('finalistsPopup').style.display = 'none';
+//    });
+//  }
+//  document.getElementById('finalistsPopup').style.display = 'block';
+//});
 
 
 
