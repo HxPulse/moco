@@ -47,7 +47,7 @@ const passives = {
     "Gadget Battery": 30,
     "Cactus Charm": 30,
     "Auto Zapper": 20,
-    "Chicken-o-Matic": 20,
+    "Chicken-O-Matic": 20,
     "Healthy Snacks": 10,
     "Healing Charm": 10,
     "Vampire Teeth": 10,
