@@ -1,58 +1,59 @@
 /*** ITEMS ***/
 
 const weapons = {
+    "Techno Fists": 150,
     "Portable Portal": 100,
-    "Techno Fists": 100,
-    "Spinsickle": 90,
+    "Hornbow": 90,
+    "Jaded Blades": 90,
     "CPU Bomb": 80,
+    "Singularity": 80,
     "Speedshot": 70,
-    "Jaded Blades": 70,
     "Poison Bow": 60,
-    "Toothpick & Shield": 40,
-    "Monster Slugger": 30,
-    "Singularity": 30,
+    "Monster Slugger": 60,
+    "Spinsickle": 40,
+    "Toothpick & Shield": 20,
     "Wolf Stick": 20,
     "Buzz-Kill": 20,
-    "Staff of Good Vibes": 10,
-    "Medicine Ball": 10
+    "Staff of Good Vibes": -10,
+    "Medicine Ball": -10
 };
 
 const gadgets = {
+    "Super Loud Whistle": 140,
     "Snow Globe": 80,
+    "Pepper Spray": 80,
+    "Boombox": 80,
     "Multi Zapper": 70,
     "Smart Fireworks": 70,
-    "Pepper Spray": 70,
-    "Boombox": 50,
-    "P.E.W 3000": 50,
-    "Very Mean Pendant": 50,
-    "Super Loud Whistle": 40,
+    "Very Mean Pendant": 70,
+    "Monster Taser": 50,
+    "P.E.W 3000": 40,
     "Really Cool Sticker": 40,
-    "Monster Taser": 30,
-    "Shelldon": 30,
-    "Vitamin Shot": 10,
-    "Splash Heal": 10,
-    "Revitalizing Mist": 10,
+    "Vitamin Shot": 20,
+    "Shelldon": 10,
     "Spicy Dagger": 10,
+    "Explosive 6-Pack": -10,
+    "Splash Heal": -20,
+    "Revitalizing Mist": -20,
     "Life Jacket": -20,
-    "Feel-Better Bloom": -20,
-    "Explosive 6-Pack": -20
+    "Feel-Better Bloom": -50
 };
 
 const passives = {
+    "Explode-O-Matic": 100,
     "Unstable Lightning": 60,
     "Unstable Lazer": 60,
-    "Unstable Beam": 50,
-    "Explode-O-Matic": 50,
+    "Unstable Beam": 60,
+    "Gadget Battery": 40,
     "Smelly Socks": 30,
-    "Gadget Battery": 30,
-    "Cactus Charm": 30,
+    "Cactus Charm": 20,
     "Auto Zapper": 20,
-    "Chicken-O-Matic": 20,
-    "Healthy Snacks": 10,
-    "Healing Charm": 10,
-    "Vampire Teeth": 10,
-    "R&B Mixtape": 10,
-    "Pocket Airbag": -20,
+    "Chicken-O-Matic": 10,
+    "Healthy Snacks": -20,
+    "Healing Charm": -20,
+    "Vampire Teeth": -20,
+    "R&B Mixtape": -20,
+    "Pocket Airbag": -50
 };
 
 /*** FINALISTS ***/
